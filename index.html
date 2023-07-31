@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Engineering works</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+   
+  
+
+
+  <style>
+ 
+
+    /* Custom styling for the navbar */
+ body{
+  
+  background-color: #3a3a3d;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+ }
+  .mb-4, .card-title,h5{
+  color: #ff0000;
+  font-weight: bolder;
+  font-size: x-large;
+  text-transform: uppercase;
+}
+
+
+.first-word-uppercase-p::first-letter {
+  font-size: 25px;
+  color: #ff0000;
+  font-weight: bold;
+  line-height: .75;
+}
+
+
+q::before,
+q::after {
+  color: #ff0000;
+}
+
+   /* add this*/
+
+/*from*/
+
+.navbar-custom.scrolled .navbar-nav .nav-link {
+  color:  #ffffff;
+  font-weight: bolder;
+}
+
+    .navbar-custom {
+      background-color: transparent;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+      font-size: larger;
+      font-weight: bolder;
+      transition: background-color 0.3s;
+    }
+    .navbar-custom.scrolled {
+      background: linear-gradient(to right, #000000, #222227, #302e3b);
+    }
+    .navbar-custom .navbar-brand {
+      color: rgb(230, 228, 228);
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .navbar-custom .navbar-nav .nav-link {
+      color: rgb(233, 221, 221);
+      transition: color 0.3s;
+      
+      font-size: 30px;
+    }
+    .navbar-custom .navbar-nav .nav-link:hover {
+      color:  #ff0000;
+    }
+    /* Add 3D effect to navbar */
+    .navbar-custom::before {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(255, 255, 255, 0.3), transparent);
+      transform: perspective(200px) rotateX(-45deg);
+      pointer-events: none;
+      transition: opacity 0.3s;
+      opacity: 0;
+      z-index: -1;
+    }
+    .navbar-custom:hover::before {
+      opacity: 1;
+    }
+  
+
+    /*till here*/
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(to bottom, #000000, #00003d);
+}
+
+video {
+  width: 70%;
+  height: auto
+}
+
+.text-overlay {
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  top: 40%;
+  right: 20%;
+  transform: translate(0, -50%);
+  font-size: 80px; /* Adjust the font size as needed */
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to bottom, #f8f6fc, #858587);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+  background-blend-mode:color-burn; /* Match color grading to black background */
+  opacity: 1.0; /* Reduce opacity */
+}
+
+
+.imgcontain {
+  position: relative;
+  max-width: 100%;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 80%; 
+}
+
+.image {
+  max-width: 100%;
+  height: 450px;
+}
+
+
+
+@media (max-width: 767px) {
+
+  .mytitle{
+    font-size: 24px;
+  }
+
+.myimgtext {
+  font-size: 16px;
+}
+.myimg{
+  max-height: 250px;
+}
+.text-overlay{
+  font-size: 35px;
+}
+}
+
+
+@media (max-width: 576px) {
+
+  .mytitle{
+    font-size: 16px;
+  }
+.myimgtext {
+  font-size: 12px;
+  
+}
+
+.myimg{
+  max-height: 180px;
+}
+
+.text-overlay{
+  font-size: 30px;
+}
+}
+
+
+@media (max-width: 370px) {
+
+  .mytitle{
+    font-size: 12px;
+  }
+.myimgtext {
+  font-size: 8px;
+}
+
+.myimg{
+  max-height: 150px;
+}
+
+.text-overlay{
+  font-size: 25px;
+}
+
+}
+.btnx:hover{
+  background-color: #8d0505;;
+
+}
+
+  </style>
+</head>
+
+<body>
+  <!-------------------NAVBAR------------------>
+  <nav class="navbar nav-underline navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Your Logo</a>
+      <button class="navbar-toggler" type="button" style="background-color: white ;" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" >
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!--VIDEO-->
+
+<div class="video-container">
+  <video autoplay muted  loop >
+      <source src="3a.mp4" type="video/mp4">
+     
+  </video>
+  
+  <div class="text-overlay font-monospace" > DoubleE <h1>عيون اربيل</h1></div>
+</div>
+
+
+<!--CAROUSEL SLIDESHOW-->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="height: 550px; padding: 10px 10px;">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" >
+              <div class="carousel-item active" data-bs-interval="10000">
+              <img src="slide (3).jpg" class="d-block w-100" alt="..." style="height: 550px; border-radius: 3%; filter: brightness(70%);"  >
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 >Innovation
+                    </h5>
+                  <p><q> We listen, learn, and seek out the best ideas. We attack complacency and continually improve.</q></p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="final3.jpg  " class="d-block w-100" alt="..." style="height: 550px; border-radius: 3%; filter: brightness(70%);">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Ethics</h5>
+                  <p><q>Mutual respect, integrity, honesty, and fairness at all levels are the driving force for how we develop relationships with our staff, clients, contractors, and suppliers.</q></p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="slide (2).jpg" class="d-block w-100" alt="..." style="height: 550px; border-radius: 3%; filter: brightness(70%);">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Health, Safety & Environment</h5>
+                  <p><q>We are relentless in keeping people, environment & facilities safe from incidents, and we provide a healthy work environment for all individuals.</q></p>
+                </div>
+              </div>
+              
+            </div>
+ 
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </butt2on>
+          </div>
+          <br>
+
+
+
+<!--cards-->
+<div class="container" style="width: 100%;">
+        <div class="row row-cols-1 row-cols-md-3 g-4 " >
+          <div class="col">
+            <div class="card h-100" style="  background: rgb(32, 31, 31); color: white;">
+              <img src="2.jpg" class="card-img-top" alt="...">
+              <div class="card-body "  >
+                <p class="card-text text-center first-word-uppercase-p">Our unwavering passion for excellence, our esteemed reputation, and our commitment to delivering projects and tasks within the set timeframe is what sets us apart. </p>
+              </div>
+              <div class="card-footer text-lg-center">
+                <div class="badge  text-wrap " style="width: 15rem; background-color:#8d0505;">
+                  <h5 class="card-title fw-bold " style="color: white;">QUALITY</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100" style="  background: rgb(32, 31, 31); color: white;">
+              <img src="engineering.jpg" class="card-img-top" height="52%" alt="...">
+              <div class="card-body" >
+                <p class="card-text text-center first-word-uppercase-p">Delivering end-to-end solutions across Engineering, Procurement, Construction (EPC), Chemical Services, Plant Operations & Maintenance services, Heat Exchangers Retubing & Manufacturing, Effluent treatment and disposal and Project Management. </p>
+              </div>
+              <div class="card-footer text-lg-center">
+
+                <a href="services.html">
+                  <button class="btn  btn-danger btnx btn-outline-danger fw-bold" style=" width: 15rem; background-color:rgba(255, 0, 0, 0.896); color: white;">Services</button>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100"  style=" background: rgb(32, 31, 31);color: white;">
+              <img src="5.jpg" class="card-img-top" height="52%" alt="...">
+              <div class="card-body">
+                <p class="card-text text-center first-word-uppercase-p">We understand that our actions have a profound impact on the world around us, and we are committed to taking a proactive approach to address the environmental challenges we face, foster social well-being, and positively contribute to the communities we serve. 
+                  </p>
+              </div> <div class="card-footer text-lg-center">
+                <div class="badge  text-wrap " style="width: 18rem; background-color: #8d0505;">
+                  <h5 class="card-title fw-bold " style="color: white">SUSTAINABILITY</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+
+
+
+
+
+<!--lastcards-->
+          
+          <br>
+          <!--  -----  -----SLIDES-->
+          <div id="carouselExampleIndicators"  class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner ">
+              <div class="carousel-item  active">
+                <div class="image-container  imgcontain ">
+                <div class="card text-center  text-bg-dark">
+                  <img  class="myimg"  src="vision.jpg" class="card-img " alt="..." style="opacity: 0.2; max-height: 80vh;">
+                  <div class="card-img-overlay">
+                    <div class="image-text myimgtext">  
+                    <h5 class="card-title font-monospace  mytitle text-center">Vision</h5>
+                    <p><q>Our vision is to be the foremost multinational integrated engineering, procurement, and construction company, distinguished by our exceptional client relationships and a thriving workforce. We are committed to expanding our presence, delivering innovative solutions, and fostering a culture of collaboration and growth.</p>
+                    </q>  
+                  </div>
+                </div>
+              </div>
+                
+                </div>
+              </div>
+             
+
+              <div class="carousel-item">
+                <div class="image-container imgcontain">
+                <div class="card text-center text-bg-dark">
+                  <img class="myimg" src="values.jpg" class="card-img myimg" alt="..." style="opacity: 0.2; max-height: 80vh;">
+                  <div class="card-img-overlay">
+                    <div class="image-text myimgtext">                  
+                      <h5 class="card-title font-monospace lh-base mytitle text-center">Values</h5>
+                    <p>
+                      <q>
+                      Inspire each other with important work full of purpose, challenging development opportunities, and rewarding careers. Whether it is independently or collaboratively, we aspire to be the employer of choice in our industry.  We are relentless in keeping people, environment & facilities safe from incidents, and we provide a healthy work environment for all individuals.
+                      Mutual respect, integrity, honesty, and fairness at all levels are the driving force for how we develop relationships with our staff, clients, contractors, and suppliers.
+                    </q>  </p>
+                  </div>
+
+                </div>
+              </div>
+              </div>
+            </div>
+          
+          
+                
+              <div class="carousel-item">
+                <div class="image-container imgcontain">
+                  <div class="card text-center text-bg-dark">
+                  <img class="myimg" src="convenant.jpg" class="card-img myimg" alt="..." style="opacity: 0.2; max-height: 80vh;">
+                  <div class="card-img-overlay">
+                    <div class="image-text myimgtext">                  
+                      <h5 class="card-title font-monospace mytitle lh-base text-center">Covenants</h5>
+                    <p>
+                    <q>
+                      Respect. Treat all colleagues with mutual respect, trust, and dignity.
+                      Collaborate. Help each other; ask for and welcome help. Offer and give it freely. Communicate early, honestly, and completely with all stakeholders.
+                      Deliver. Make commitments responsibly and honor those commitments.
+                      Innovate. Embrace change, build upon experiences and lessons learned. Learn It, Do It, Share It.
+                      Be Decisive. Work jointly to reach decisions efficiently. If required, go to a higher authority together and accept and support the solution.
+                    </q></p>
+                  </div>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          
+          
+      <hr class="mb-4">
+        </div>
+      </div>
+        
+
+
+
+  <!--footer starts herre-->
+  <footer class=" bg-dark text-white pt-5 pb-4"   style="font-family: 'Poppins', sans-serif; 
+  background: linear-gradient(to bottom, #000000, #1f1e1e, #434242);">
+   <div class="container text-center text-md-left">
+ 
+     <div class="row text-center text-md-left">
+ 
+       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+         <h5 class="text-uppercase mb-4 font-weight-bold    ">Company Name</h5>
+         <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+           ital consectetur lorem ipsum dolor sit amet adipisicing elit.</p>
+         
+       </div>
+ 
+       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+         <h5 class="text-uppercase mb-4 font-weight-bold ">Products</h5>
+       <p>
+         <a href="#" class="text-white" style="text-decoration: none;"> Engineers</a>
+       </p>
+       <p>
+         <a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+       </p>
+       <p>
+         <a href="#" class="text-white" style="text-decoration: none;"> Files</a>
+       </p>
+       <p>
+         <a href="#" class="text-white" style="text-decoration: none;"> xyzzz</a>
+       </p>
+ 
+       </div>
+ 
+       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+         <h5 class="text-uppercase mb-4 font-weight-bold ">Useful links</h5>
+       <p>
+         <a href="#" class="text-white" style="text-decoration: none;"> Your Account</a>
+       </p>
+       <p>
+         <a href="#" class="text-white" style="text-decoration: none;"> xyz</a>
+       </p>
+       <p>
+         <a href="#" class="text-white" style="text-decoration: none;"> Rates</a>
+       </p>
+       <p>
+         <a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+       </p>
+       </div>
+ 
+       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+         <h5 class="text-uppercase mb-4 font-weight-bold " >Contact</h5>
+         <p>
+           <i class="fas fa-home mr-3"></i>isb, pk, xyz
+         </p>
+         <p>
+           <i class="fas fa-envelope mr-3"></i>xyz@gmail.com
+         </p>
+         <p>
+           <i class="fas fa-phone mr-3"></i>+92 310000000
+         </p>
+         <p>
+           <i class="fas fa-print	 mr-3"></i>+0999999999
+         </p>
+       </div>
+       
+     </div>
+ 
+     <hr class="mb-4">
+ 
+ 
+   </div>
+
+
+
+   
+ </footer>
+ 
+
+
+  <script>
+    // Add scroll event listener to change the navbar background color
+    window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('.navbar-custom');
+      navbar.classList.toggle('scrolled', window.scrollY > 0);
+    });
+  </script>
+
+
+
+
+
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        </body>
+</html>

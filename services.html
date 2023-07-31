@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  
+  
+
+
+  <style>
+
+
+    /* Custom styling for the navbar */
+    body
+{
+  background-color: #3a3a3d;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+ }
+  .mb-4, .card-title{
+  color:  #ff0000;
+  font-weight: bolder;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.h5,.card-title1{
+  
+  color:  #ff0000;
+  font-weight: bolder;
+  font-size: 35px;
+  text-transform: uppercase;
+
+}
+
+
+
+
+ 
+.first-word-uppercase-p::first-letter 
+{
+  font-size: 25px;
+  color:  #ff0000;
+  font-weight: bold;
+  line-height: .75;
+}
+
+
+q::before,
+q::after 
+{
+  color:  #ff0000;
+}
+
+
+
+/*from*/
+
+.navbar-custom.scrolled .navbar-nav .nav-link {
+  color:  #ffffff;
+  font-weight: bolder;
+}
+
+    .navbar-custom {
+      background-color: transparent;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+      font-size: larger;
+      font-weight: bolder;
+      transition: background-color 0.3s;
+    }
+    .navbar-custom.scrolled {
+      background: linear-gradient(to right, #000000, #222227, #302e3b);
+    }
+    .navbar-custom .navbar-brand {
+      color: rgb(230, 228, 228);
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .navbar-custom .navbar-nav .nav-link {
+      color: rgb(233, 221, 221);
+      transition: color 0.3s;
+      
+      font-size: 30px;
+    }
+    .navbar-custom .navbar-nav .nav-link:hover {
+      color:  #ff0000;
+    }
+    /* Add 3D effect to navbar */
+    .navbar-custom::before {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(255, 255, 255, 0.3), transparent);
+      transform: perspective(200px) rotateX(-45deg);
+      pointer-events: none;
+      transition: opacity 0.3s;
+      opacity: 0;
+      z-index: -1;
+    }
+    .navbar-custom:hover::before {
+      opacity: 1;
+    }
+  
+
+    /*till here*/
+
+
+.text-overlay {
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  top: 35%;
+  right: 20%;
+  transform: translate(0, -50%);
+  font-size: 80px; /* Adjust the font size as needed */
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to bottom, #f8f6fc, #858587);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+  background-blend-mode:color-burn; /* Match color grading to black background */
+  opacity: 1.0; /* Reduce opacity */
+}
+
+/* gallery */
+.item {
+      transition: .1s ease-in-out;
+      
+    }
+
+    .item:hover {
+      filter: brightness(80%);
+    }
+
+    /* button*/
+  .btn-primary{
+    background-color:#ff0000;
+    
+    
+
+    }
+
+ .btn-primary:hover{
+  background-color:#8d0505;
+  
+ }
+
+/* here are the cards of services */
+.card{
+  height: 100%;
+}
+
+.card-body{
+  background: rgb(32, 31, 31);
+  color: white;
+  margin-top: 0px;
+}
+
+.offcanvas-header{
+  background: rgba(0, 0, 0, 0.908);
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold; 
+    color:  #ff0000;
+}
+
+
+
+
+/* here first image css */
+.card-img-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  padding: 100px;
+  font-weight: bolder;
+}
+
+@media (max-width: 767px) {
+  .content {
+    padding: 20px;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-text {
+    font-size: 12px;
+  }
+  
+  .card-img {
+      max-height: 270px; /* Adjust the height as per your requirement */
+      object-fit: cover;
+    }
+  
+.text-overlay{
+  font-size: 35px;
+}
+}
+
+
+@media (max-width: 576px) {
+  .content {
+    padding: 10px;
+  }
+
+  .card-title1 {
+    font-size: 15px;
+  }
+
+  .card-text1 {
+    font-size: 10px;
+  }
+  
+  .card-img {
+      max-height: 200px; /* Adjust the height as per your requirement */
+      object-fit: cover;
+    }
+  
+.text-overlay{
+  font-size: 30px;
+}
+
+}
+@media (max-width: 420px) {
+  .content {
+    padding: 5px;
+  }
+
+  .card-title1 {
+    font-size: 10px;
+  }
+
+  .card-text1 {
+    font-size: 8px;
+  }
+  
+  .card-img {
+      max-height: 250px; /* Adjust the height as per your requirement */
+      object-fit: cover;
+    }
+  
+
+    .text-overlay{
+  font-size: 25px;
+}
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div>
+  <img src="fa.jpg"  alt="..." style=" filter: brightness(70%);   height: auto;" width="100%">
+  
+  <div class="text-overlay font-monospace" > DoubleE <h1>عيون اربيل</h1></div>
+</div>
+
+
+  <!-------------------NAVBAR------------------>
+  <nav class="navbar nav-underline navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Your Logo</a>
+      <button class="navbar-toggler" type="button" style="background-color: white ;" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" >
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+
+
+
+
+  <div class="card text-bg-dark">
+    <img src="h.jpg" class="card-img" alt="..." height="450px" style="opacity: 0.5;  filter: brightness(50%);">
+    <div class="card-img-overlay">
+      <div class="content">
+        <h5 class="card-title card-title1 font-monospace lh-base text-center">OUR SERVICES</h5>
+        <p class="card-text card-text1 font-monospace lh-lg text-center">
+          <q>DoubleE self-performs all major aspects of services, planning, design, procurement, and execution in the markets of energy and infrastructure.
+            Delivering end-to-end solutions across Engineering, Procurement, Construction (EPC), Chemical Services, Plant Operations & Maintenance services, Heat Exchangers Retubing & Manufacturing, Effluent treatment and disposal, and Project Management.
+            We ensure your project is delivered with the highest degree of safety, quality, and efficiency.</q>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+<!--
+
+<div class="card text-bg-dark">
+  <img src="h.jpg" class="card-img" alt="..." height="450px" style=" opacity: 0.5;" >
+  <div class="card-img-overlay" >
+    <div style="padding: 100px; font-weight: bolder;">
+    <h5 class="card-title font-monospace lh-base text-center">OUR SERVICES</h5>
+    <p class="card-text font-monospace lh-lg text-center" ><q>DoubleE self-performs all major aspects of Services, planning, design, procurement, and execution in the markets of energy and infrastructure. 
+      Delivering end-to-end solutions across Engineering, Procurement, Construction (EPC), Chemical Services, Plant Operations & Maintenance services, Heat Exchangers Retubing & Manufacturing, Effluent treatment and disposal and Project Management. 
+      We ensure your project is delivered with the highest degree of safety, quality, and efficiency.</q</p>
+  </div>
+</div>
+</div>
+
+-->
+
+
+<!--cards here -->
+<div class="container  ">
+  <div class="row">
+    <!-- First card section -->
+    <div class="col-md-6 ">
+      <div class="card mb-3 ">
+        <div class="row g-0 h-100 ">
+          <div class="col-md-4">
+            <img src="a1.jpg" class=" card-img img-fluid rounded-start  h-100 " alt="...">
+          </div>
+          <div class="col-md-8" >
+            <div class="card-body h-100" >
+              <h5 class="card-title">ENGINEERING</h5>
+              <p class="card-text first-word-uppercase-p ">
+                Our in-house engineering team delivers solutions from conceptual development and front-end work (FEED) to detailed engineering and site support for projects of all sizes and complexity. We pride ourselves on producing a quality product that meets the needs of our customers. 
+                <button class="btn btn-danger btn-sm"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions1" aria-controls="offcanvasWithBothOptions1">
+                  READ MORE</button>
+  
+              </p>
+
+            
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions1" aria-labelledby="offcanvasWithBothOptionsLabel1">
+                <div class="offcanvas-header  " >
+                  <h5 class="offcanvas-title  " id="offcanvasWithBothOptionsLabel1"   >ENGINEERING</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"  style="background-color: rgb(255, 0, 0);" aria-label="Close"></button>
+                </div>
+                <div class=" text-start offcanvas-body" style="position: relative;">
+                  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(a1.jpg); background-size: cover;  filter: brightness(30%);"></div>
+                  <p style="color: #fffefe; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; position: relative; z-index: 1;">
+                    Design and execution for complex challenges:
+                    Our in-house engineering team delivers solutions from conceptual development and front-end work (FEED) to detailed engineering and site support for projects of all sizes and complexity. We pride ourselves on producing a quality product that meets the needs of our customers.
+                    Our engineers take an innovative approach to deliver practical and high-quality solutions.
+                    By doing this, we can help our customers maximize their asset values, improve their competitive positioning, and improve long-term business success.
+                    Whether the project is large or small, a new facility, a revamp, or the enhancement of a current facility, DoubleE provides effective solutions that work for any type of project requirement.
+                  </p>
+                </div>
+              </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second card section -->
+    <div class="col-md-6">
+      <div class="card mb-3 ">
+        <div class="row g-0 h-100 ">
+          <div class="col-md-4">
+            <img src="a2.jpg" class=" card-img img-fluid rounded-start h-100" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body h-100">
+              <h5 class="card-title">PROCUREMENT</h5>
+              <p class="card-text first-word-uppercase-p">  DoubleE is seamlessly integrated, with automation tools that manage supply from model, FEED, execution, and completion.
+                Procurement Management Process
+                •	Contracts & purchasing 
+                o	Efficient and rigorous processes
+              
+
+              <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions2" aria-controls="offcanvasWithBothOptions2">
+                READ MORE</button>
+              </p>
+
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions2" aria-labelledby="offcanvasWithBothOptionsLabel2">
+                <div class="offcanvas-header  ">
+             
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel2">PROCUREMENT</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"  style="background-color: rgb(255, 0, 0);" aria-label="Close"></button>
+                </div>
+                <div class=" text-start offcanvas-body" style="position: relative;">
+                  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(a2.jpg); background-size: cover;  filter: brightness(30%);"></div>
+                  <p style="color: #fffefe; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; position: relative; z-index: 1;">
+                  DoubleE is seamlessly integrated, with automation tools that manage supply from model, FEED, execution, and completion.
+                    Procurement Management Process
+                    •	Contracts & purchasing 
+                    o	Efficient and rigorous processes driven by proactive planning.
+                    o	Engage the right suppliers at the right price.
+                    •	Expediting
+                    o	Data, drawings, deliveries, suppliers, and sub-suppliers
+                    •	Supplier Quality
+                    o	Field and shop quality management programs
+                    •	Traffic & Logistics
+                    o	Ensures appropriate transportation resources are employed in the global movement of equipment and material.
+                    •	Material Management
+                    o	Right goods at the right place at the right time
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--3rd -->
+    </div> <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0 h-100 ">
+          <div class="col-md-4">
+            <img src="a3.jpg" class=" card-img img-fluid rounded-start h-100" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body h-100">
+              <h5 class="card-title">CONSTRUCTION</h5>
+              <p class="card-text first-word-uppercase-p">Our extensive knowledge of constructability principles modularized Civil and Mechanical construction & installation.
+
+              <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions3" aria-controls="offcanvasWithBothOptions2">
+                READ MORE</button>
+              </p>
+
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions3" aria-labelledby="offcanvasWithBothOptionsLabel2">
+                <div class="offcanvas-header  " >
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel2">CONSTRUCTION</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"  style="background-color:  rgb(255, 0, 0);"aria-label="Close"></button>
+                </div>
+                <div class=" text-start offcanvas-body" style="position: relative;">
+                  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(a3.jpg); background-size: cover;  filter: brightness(30%);"></div>
+                  <p style="color: #fffefe; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; position: relative; z-index: 1;">
+                        Our extensive knowledge of constructability principles modularized Civil and Mechanical construction & installation.
+                    Expertise
+                    •	Dedicated tradespeople
+                    •	Machinery, Tools & tackles
+                    •	Onsite management, including field procurement and materials management.
+                    •	Industry leading Health, Safety, and Environmental services (HSE)
+                    •	Constructability know-how
+                    •	Quality assurance & control 
+                    •	Innovative labor relations capabilities
+                    •	Commissioning, startup, maintenance & operations
+                    
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--4th card-->
+    </div> <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0 h-100 ">
+          <div class="col-md-4">
+            <img src="chemical.jpg" class=" card-img img-fluid rounded-start h-100" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body h-100">
+              <h5 class="card-title">CHEMICAL SOLUTIONS</h5>
+              <p class="card-text first-word-uppercase-p">DoubleE has years of experience supplying a diverse range of products and solutions into the oil and gas & Energy market. 
+                Our experience allows us to be creative and craft customized, economically advantageous solutions for each of our customers. 
+
+                
+
+              <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions4" aria-controls="offcanvasWithBothOptions2">
+                READ MORE</button>
+                </p>
+
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions4" aria-labelledby="offcanvasWithBothOptionsLabel2">
+                <div class="offcanvas-header  ">
+
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel2">CHEMICAL SOLUTIONS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"  style="background-color:  rgb(255, 0, 0);"aria-label="Close"></button>
+                </div>
+                
+  <!--here another  image is used bcz  lower brightness setting was not working properly-->
+  <div class="offcanvas-body" style="position: relative; overflow: auto; background-image: url('chemical2.jpg'); background-size: cover;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; filter: brightness(30%);"></div>
+    <p style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold;">
+                 DoubleE has years of experience supplying a diverse range of products and solutions into the oil and gas & Energy market. 
+                    Our experience allows us to be creative and craft customized, economically advantageous solutions for each of our customers. 
+                    We’re focused on providing solutions for our customers at each step of their process chemical program, we provide support, logistics, and transportation, from our facilities to end-users.
+                    Chemical Cleaning:
+DoubleE industrial chemical cleaning services carried out by trained and experienced professionals with specialized safety procedures and protocols.
+We use specialized chemicals to clean and maintain industrial equipment and facilities. The chemicals used are carefully selected based on factors such as the type of equipment being cleaned, the level of dirt and grime buildup, and any specific requirements or regulations that must be followed.
+Our Industrial chemical cleaning services help to maintain the equipment and facilities, increase productivity, and ensure a safe and healthy working environment. And extend the lifespan of equipment, reduce the risk of breakdowns and malfunctions, and lower overall maintenance costs.
+
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0 h-100 ">
+          <div class="col-md-4">
+            <img src="a5.jpg" class=" card-img img-fluid rounded-start h-100" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body h-100">
+              <h5 class="card-title">PLANT OPERATIONS AND MAINTENANCE</h5>
+              <p class="card-text first-word-uppercase-p">A strong and diversified team of multi-skilled personnel who can cater for and support any Plant Operations & Corrective or Preventive maintenance requirements in the Energy Sector (Refineries, Petrochemicals & Power Houses).
+
+              <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions5" aria-controls="offcanvasWithBothOptions2">
+                READ MORE</button>
+                </p>
+
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions5" aria-labelledby="offcanvasWithBothOptionsLabel2">
+                <div class="offcanvas-header  " >
+
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel2">PLANT OPERATIONS AND MAINTENANCE</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"  style="background-color:  rgb(255, 0, 0);"aria-label="Close"></button>
+                  </div>
+                  <div class=" text-start offcanvas-body" style="position: relative;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(a5.jpg); background-size: cover;  filter: brightness(30%);"></div>
+                    <p style="color: #fffefe; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; position: relative; z-index: 1;">
+  A strong and diversified team of multi-skilled personnel who can cater for and support any Plant Operations & Corrective or Preventive maintenance requirements in the Energy Sector (Refineries, Petrochemicals & Power Houses).
+                    Planning & execution of Major Turnarounds and Planned/Emergency shutdowns to take care of the Statutory Inspection requirements and repair works of equipment and piping on Onshore and Offshore Plant facilities.
+                    Provision of Long-Term Operations & Maintenance Services (O&M) (classified as Baseload Manpower or Full Time Employee or Defined Estimate Manpower by clients). The Categories include but not limited to Skilled O&M Engineers and Technicians in Operation, Mechanical, Electrical, Instrumentation, Welding, Fabrication, Machining, Warehouse, Valves, Tanks & Heat Exchangers servicing.
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0 h-100 ">
+          <div class="col-md-4">
+            <img src="a6.jpg" class=" card-img img-fluid rounded-start h-100" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body h-100">
+              <h5 class="card-title">HEAT EXCHANGERS RETUBING AND MANUFACTURING</h5>
+              <p class="card-text first-word-uppercase-p">Retubing
+                DoubleE Heat exchanger retubing services involve removing the damaged or fouled tubes from the heat exchanger and replacing them with new tubes under the TEMA standards. with specialized equipment and expertise, the process documentation and procedures are prepared for each type of exchanger.
+              
+                
+              <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions6" aria-controls="offcanvasWithBothOptions2">
+                READ MORE</button>
+</p>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions6" aria-labelledby="offcanvasWithBothOptionsLabel2">
+  <div class="offcanvas-header" style="background-color: HEX #49c5b6;">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel2">HEAT EXCHANGERS RETUBING AND MANUFACTURING</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <!--here another  image is used bcz  lower brightness setting was not working properly-->
+  <div class="offcanvas-body" style="position: relative; overflow: auto; background-image: url('a62.jpg'); background-size: cover;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; filter: brightness(30%);"></div>
+    <p style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold;">
+         Retubing:
+      DoubleE Heat exchanger retubing services involve removing the damaged or fouled tubes from the heat exchanger and replacing them with new tubes under the TEMA standards. With specialized equipment and expertise, the process documentation and procedures are prepared for each type of exchanger.
+      Our retubing process typically includes the following steps:
+      - The heat exchanger is inspected to identify the extent of the damage or fouling.
+      - The damaged tubes are removed from the heat exchanger using specialized equipment.
+      - The interior of the heat exchanger's tubes is thoroughly cleaned to remove any debris or fouling.
+      - New tubes are carefully installed, welded, and rolled at torque setting to ensure proper alignment.
+      - The heat exchanger is tested to ensure that it is functioning properly and efficiently.
+      
+      Our Heat exchanger retubing services guarantee efficiency, reliability, and extend the lifespan of the equipment.
+      
+      Manufacturing:
+      DoubleE has in-house specialized capabilities, knowledge, equipment, and expertise for designing and manufacturing all types of Heat Exchangers as per TEMA and ASME Standards.
+      DoubleE also works with reputable and experienced heat exchanger manufacturers worldwide to ensure that the heat exchanger is fabricated and tested to meet the specific requirements of the clients.
+    </p>
+  </div>
+</div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0 h-100 ">
+          <div class="col-md-4">
+            <img src="a7.jpg" class="card-img img-fluid rounded-start h-100" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body h-100">
+              <h5 class="card-title">EFFLUENT TREATMENT AND DISPOSAL</h5>
+              <p class="card-text first-word-uppercase-p">DoubleE is engaged in the development, designing, and manufacturing of wastewater treatment systems. 
+                We operate through various segments including power, industrial and Upstream & downstream Oil & Gas facilities effluent produced water
+
+              <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions7" aria-controls="offcanvasWithBothOptions2">
+                READ MORE</button>
+              </p>
+
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions7" aria-labelledby="offcanvasWithBothOptionsLabel2">
+                <div class="offcanvas-header  ">
+
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel2">EFFLUENT TREATMENT AND DISPOSAL</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"  style="background-color:  rgb(255, 0, 0);"aria-label="Close"></button>
+                  </div>
+                  <div class=" text-start offcanvas-body" style="position: relative;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(a7.jpg); background-size: cover;  filter: brightness(30%);"></div>
+                    <p style="color: #fffefe; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; position: relative; z-index: 1;">
+                DoubleE is engaged in the development, designing, and manufacturing of wastewater treatment systems. 
+                    We operate through various segments including power, industrial and Upstream & downstream Oil & Gas facilities effluent produced water. 
+                    DoubleE aims to utilize its treatment systems to increase water usage efficiency, provide quality water solutions for its customers and help them meet regulatory and environmental compliance.
+                    DoubleE Water Technologies has innovative, integrated products that are valuable in the industrial wastewater treatment process, including UF membranes, clarifiers, conventional gravity filters, chemicals, evaporation, and an assortment of post-treatment technologies.
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0 h-100 ">
+          <div class="col-md-4">
+            <img src="a8.jpg" class=" card-img img-fluid rounded-start h-100" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body h-100">
+              <h5 class="card-title">PROJECT MANAGEMENT</h5>
+              <p class="card-text first-word-uppercase-p">DoubleE offers complete Project Management services. 
+                Our Project Management team is comprised of seasoned experts and front-line leaders who have experience steering some of the most complex management jobs. We offer services including health, safety, and
+                
+
+              <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions8" aria-controls="offcanvasWithBothOptions2">
+                READ MORE</button>
+</p>
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions8" aria-labelledby="offcanvasWithBothOptionsLabel2">
+                <div class="offcanvas-header  ">
+
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel2">PROJECT MANAGEMENT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"  style="background-color:  rgb(255, 0, 0);"aria-label="Close"></button>
+                  </div>
+                  <div class=" text-start offcanvas-body" style="position: relative;">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(a8.jpg); background-size: cover;  filter: brightness(30%);"></div>
+                    <p style="color: #fffefe; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; position: relative; z-index: 1;">
+                DoubleE offers complete Project Management services. 
+Our Project Management team is comprised of seasoned experts and front-line leaders who have experience steering some of the most complex management jobs. We offer services including health, safety, and environment management, field engineering, quality assurance, contracts management, field procurement, materials management, field project controls, constructability, and project planning.
+<br>
+Expertise:
+<br>•	Managing the bid process and negotiating contracts
+<br>•	Overseeing management including field procurement, receiving, inspection, and warehousing, materials, and issuing them to contractors
+<br>•	Overseeing construction and field administration
+<br>•	Commissioning, startup, maintenance, and operations
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--gallery -->
+<br>
+<h2 style="color: white;"><center>GALLERY</center></h2>
+
+<div class="container-fluid">
+  <div class="row mt-4">
+    <div class="item col-sm-6 col-md-4 mb-3">
+      <a href="eng2.jpg" data-fancybox="gallery1">
+        <img src="eng2.jpg"  class="img-fluid" alt="">
+      </a>
+    </div>
+    <div class="item col-sm-6 col-md-4 mb-3">
+      <a href="vision.jpg" data-fancybox="gallery1">
+        <img src="vision.jpg" class="img-fluid h-100"  class="img-fluid" alt="">
+      </a>
+    </div>
+    <div class="item col-sm-6 col-md-4 mb-3">
+      <a href="e.jpg"  data-fancybox="gallery1">
+        <img src="e.jpg" class="img-fluid h-100" class="img-fluid" alt="">
+      </a>
+    </div>
+    <div class="item col-sm-6 col-md-4 mb-3">
+      <a href="eng.jpg" data-fancybox="gallery1">
+        <img src="eng.jpg" class="img-fluid" alt="">
+      </a>
+    </div>
+    <div class="item col-sm-6 col-md-4 mb-3">
+      <a href="f.jpg" data-fancybox="gallery1">
+        <img src="f.jpg" class="img-fluid h-100" class="img-fluid" alt="">
+      </a>
+    </div>
+    <div class="item col-sm-6 col-md-4 mb-3">
+      <a href="a.jpg" data-fancybox="gallery1">
+        <img src="a.jpg" class="img-fluid" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!--gallery codes end here, js at the end -->
+
+
+
+  <!--footer starts herre-->
+   <footer class=" bg-dark text-white pt-5 pb-4"   style="font-family: 'Poppins', sans-serif; 
+   background: linear-gradient(to bottom, #000000, #1f1e1e, #434242);">
+    <div class="container text-center text-md-left">
+  
+      <div class="row text-center text-md-left">
+  
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold    ">Company Name</h5>
+          <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+            ital consectetur lorem ipsum dolor sit amet adipisicing elit.</p>
+          
+        </div>
+  
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold ">Products</h5>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;"> Engineers</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;"> Files</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;"> xyzzz</a>
+        </p>
+  
+        </div>
+  
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold ">Useful links</h5>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;"> Your Account</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;"> xyz</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;"> Rates</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+        </p>
+        </div>
+  
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold " >Contact</h5>
+          <p>
+            <i class="fas fa-home mr-3"></i>isb, pk, xyz
+          </p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i>xyz@gmail.com
+          </p>
+          <p>
+            <i class="fas fa-phone mr-3"></i>+92 310000000
+          </p>
+          <p>
+            <i class="fas fa-print	 mr-3"></i>+0999999999
+          </p>
+        </div>
+        
+      </div>
+  
+      <hr class="mb-4">
+  
+  
+    </div>
+ 
+
+
+    
+  </footer>
+  
+
+
+
+
+  <script>
+       // Add scroll event listener to change the navbar background color
+       window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('.navbar-custom');
+      navbar.classList.toggle('scrolled', window.scrollY > 0);
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        </body>
+</html>
